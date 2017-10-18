@@ -1,8 +1,6 @@
---------------------
 -- mysql script
 -- author: Michael Wellner
 -- date: 18.10.2017
---------------------
 
 -- create new authorities table @ mydatabase
 USE mydatabase;

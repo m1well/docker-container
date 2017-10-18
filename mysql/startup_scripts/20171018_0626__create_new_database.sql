@@ -1,8 +1,6 @@
---------------------
 -- mysql script
 -- author: Michael Wellner
 -- date: 18.10.2017
---------------------
 
 -- drop database if it exists
 DROP DATABASE IF EXISTS mydatabase;
