@@ -7,20 +7,18 @@
 
 1. Checkout this repository
 2. navigate to this folder "mysql"
-2. run command `docker-compose up`<br>
+2. run command `docker-compose up`
 
 ### docker run
 
 > You can also run the container with the docker run command (from everywhere).<br>
 > Attention: Change "project_folder" to your folder<br>
 
-```
-docker run -p 3306:3306 --name mysql_db \
--v ~/project_folder/mysql_data:/var/lib/mysql \
--v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \
--e MYSQL_ROOT_PASSWORD=root --restart=always \
--d mysql:latest
-```
+`docker run -p 3306:3306 --name mysql_db \`<br>
+`-v ~/project_folder/mysql_data:/var/lib/mysql \`<br>
+`-v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \`<br>
+`-e MYSQL_ROOT_PASSWORD=root --restart=always \`<br>
+`-d mysql:latest`<br>
 
 ### docker exec
 

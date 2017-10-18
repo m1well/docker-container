@@ -7,19 +7,17 @@
 
 1. Checkout this repository
 2. navigate to this folder "mysql"
-2. run command `docker-compose up`<br>
+2. run command `docker-compose up`
 
 ### docker run
 
 > You can also run the container with the docker run command (from everywhere).<br>
 > Attention: Change "project_folder" to your folder<br>
 
-```
-docker run --name oracle_db -d -p 49160:22 -p 49161:1521 -p 49162:8080 \
--v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \
--e ORACLE_ALLOW_REMOTE=true --restart=always \
--d wnameless/oracle-xe-11g
-```
+`docker run --name oracle_db -d -p 49160:22 -p 49161:1521 -p 49162:8080 \`<br>
+`-v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \`<br>
+`-e ORACLE_ALLOW_REMOTE=true --restart=always \`<br>
+`-d wnameless/oracle-xe-11g`<br>
 
 ### docker exec
 
