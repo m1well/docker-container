@@ -2,11 +2,13 @@
 
 ### docker run
 
+```
 docker run -p 3306:3306 --name mysql_db \
 -v ~/project_folder/mysql_data:/var/lib/mysql \
 -v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \
 -e MYSQL_ROOT_PASSWORD=root \
 -d mysql:latest
+```
 
 ### docker exec
 
