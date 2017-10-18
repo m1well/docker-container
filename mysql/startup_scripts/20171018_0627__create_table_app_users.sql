@@ -2,12 +2,12 @@
 -- author: Michael Wellner
 -- date: 18.10.2017
 
--- create new users table @ mydatabase
+-- create new app_users table @ mydatabase
 USE mydatabase;
 
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS app_users;
 
-CREATE TABLE users (
+CREATE TABLE app_users (
    uuid VARCHAR(36) NOT NULL,
    user_name VARCHAR(20) NOT NULL,
    password VARCHAR(30) NOT NULL,

@@ -1,0 +1,22 @@
+### author: Michael Wellner ###
+### date: 18.10.2017 ###
+### docker compose file for a oracle docker container ###
+# 1 folder mounted:
+# - for possible startup scripts
+
+version: "3"
+services:
+   mysql_db:
+      container_name: oracle_db
+      image: wnameless/oracle-xe-11g:latest
+      ports:
+         - "49160:22"
+         - "49161:1521"
+         - "49162:8080"
+      restart: always
+      volumes:
+         - "./startup_scripts:/docker-entrypoint-initdb.d"
+      environment:
+         - ORACLE_ALLOW_REMOTE=true
+
+### end of file ###

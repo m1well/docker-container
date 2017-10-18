@@ -1,4 +1,4 @@
-# mysql container
+# oracle container
 
 ### docker compose up
 
@@ -15,19 +15,17 @@
 > Attention: Change "project_folder" to your folder<br>
 
 ```
-docker run -p 3306:3306 --name mysql_db \
--v ~/project_folder/mysql_data:/var/lib/mysql \
+docker run --name oracle_db -d -p 49160:22 -p 49161:1521 -p 49162:8080 \
 -v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \
--e MYSQL_ROOT_PASSWORD=root --restart=always \
--d mysql:latest
+-e ORACLE_ALLOW_REMOTE=true --restart=always \
+-d wnameless/oracle-xe-11g
 ```
 
 ### docker exec
 
 > To jump into the container use following commands:<br>
 
-unix bash: `docker exec -it mysql_db /bin/bash`<br>
-windows git bash: `winpty docker exec -it mysql_db bash`<br>
-execute mysql cli: `mysql --user=root --password=root;`<br>
-choose database: `USE mydatabase;`<br>
-execute commands: `SHOW TABLES;`<br>
+unix bash: `docker exec -it oracle_db /bin/bash`<br>
+windows git bash: `winpty docker exec -it oracle_db bash`<br>
+execute mysql cli: `sqlplus system/oracle@127.0.0.1:1521/XE;`<br>
+execute commands: `SELECT username FROM dba_users;`<br>
