@@ -1,3 +1,5 @@
+### author: Michael Wellner ###
+### date: 18.10.2017 ###
 ### docker compose file for a mysql docker container ###
 # 2 folders mounted:
 # - one for the mysql data
