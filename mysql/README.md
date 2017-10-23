@@ -2,8 +2,12 @@
 
 ### docker compose up
 
+> Best pactice!<br/>
 > You can run the container by using docker compose functionality<br/>
 > Here you need the docker-compose.yml file<br/>
+> This generates a new container image with executed startup scripts<br/>
+> You can now push this image where ever you want<br/>
+< I also added a healthcheck for the container<br/>
 
 1. Checkout this repository
 2. navigate to this folder "mysql"
@@ -11,11 +15,10 @@
 
 ### docker run
 
-> You can also run the container with the docker run command (from everywhere).<br/>
+> You can also run the container with the docker run command (from everywhere)<br/>
 > Attention: Change "project_folder" to your folder<br/>
 
 `docker run -p 3306:3306 --name mysql_db \`<br/>
-`-v ~/project_folder/mysql_data:/var/lib/mysql \`<br/>
 `-v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \`<br/>
 `-e MYSQL_ROOT_PASSWORD=root --restart=always \`<br/>
 `-d mysql:latest`<br/>
