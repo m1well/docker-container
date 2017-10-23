@@ -3,7 +3,8 @@
 # date: 23.10.2017
 # healthcheck script for a tomcat docker container
 
-ROWCOUNTER=$(curl -f --silent http://localhost:8080 | wc -l)
+# call a dummy url to generate a 404 error
+ROWCOUNTER=$(curl -s http://localhost:8080/dummy-url | grep "HTTP Status 404 – Not Found" | wc -l)
 
 # check if rowcounter is greater than 0
 echo "${ROWCOUNTER}"
