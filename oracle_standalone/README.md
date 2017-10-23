@@ -1,9 +1,15 @@
 # oracle container
 
+This is a standalone container with an oracle database.<br/>
+
 ### docker compose up
 
+> Best pactice!<br/>
 > You can run the container by using docker compose functionality<br/>
 > Here you need the docker-compose.yml file<br/>
+> This generates a new container image with executed startup scripts<br/>
+> You can now push this image where ever you want<br/>
+< I also added a healthcheck for the container<br/>
 
 1. Checkout this repository
 2. navigate to this folder "mysql"

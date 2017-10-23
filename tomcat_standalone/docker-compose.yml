@@ -1,0 +1,16 @@
+### author: Michael Wellner ###
+### date: 23.10.2017 ###
+### docker compose file for a tomcat 8 docker container ###
+
+version: "3"
+services:
+   tomcat_server:
+      container_name: tomcat_server
+      image: m1well/tomcat_server:latest
+      build: .
+      ports:
+         - "8080:8080"
+         - "8009:8009"
+      restart: always
+
+### end of file ###

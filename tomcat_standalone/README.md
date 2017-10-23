@@ -1,5 +1,7 @@
 # tomcat container
 
+This is a standalone container with a tomcat server.<br/>
+
 ### docker compose up
 
 > You can run the container by using docker compose functionality<br/>

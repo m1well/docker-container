@@ -8,15 +8,10 @@ version: "3"
 services:
   mysql_db:
     container_name: mysql_db
-    image: mysql/m1well:latest
+    image: m1well/mysql_db:latest
     build: .
     ports:
       - "3306:3306"
     restart: always
-    # volumes:
-      # - mysql_data:/var/lib/mysql
-
-# volumes:
-  # mysql_data:
 
 ### end of file ###

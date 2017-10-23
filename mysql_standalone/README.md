@@ -18,7 +18,7 @@
 > You can also run the container with the docker run command (from everywhere)<br/>
 > Attention: Change "project_folder" to your folder<br/>
 
-`docker run -p 3306:3306 --name mysql_db \`<br/>
+`docker run --name mysql_db -p 3306:3306 \`<br/>
 `-v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \`<br/>
 `-e MYSQL_ROOT_PASSWORD=root --restart=always \`<br/>
 `-d mysql:latest`<br/>
