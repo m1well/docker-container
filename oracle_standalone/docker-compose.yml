@@ -1,3 +1,4 @@
+
 ### author: Michael Wellner ###
 ### date: 23.10.2017 ###
 ### docker compose file for an oracle docker container ###
@@ -7,11 +8,12 @@ services:
    oracle_db:
       container_name: oracle_db
       image: m1well/oracle_db:latest
-      build: .
       ports:
-         - "49160:22"
-         - "49161:1521"
-         - "49162:8080"
+        - "49160:22"
+        - "49161:1521"
+        - "49162:8080"
+      volumes:
+        - "./startup_scripts/:/docker-entrypoint-initdb.d/"
       restart: always
 
 ### end of file ###

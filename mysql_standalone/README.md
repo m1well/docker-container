@@ -1,5 +1,7 @@
 # mysql container
 
+This is a standalone container with a mysql database.<br/>
+
 ### docker compose up
 
 > Best pactice!<br/>
@@ -7,15 +9,15 @@
 > Here you need the docker-compose.yml file<br/>
 > This generates a new container image with executed startup scripts<br/>
 > You can now push this image where ever you want<br/>
-< I also added a healthcheck for the container<br/>
+< I also added a healthcheck script but removed it from the dockerfile because of macOS problems<br/>
 
 1. Checkout this repository
 2. navigate to this folder "mysql"
-2. run command `docker-compose up`
+2. run command `bash build.sh`
 
 ### docker run
 
-> You can also run the container with the docker run command (from everywhere)<br/>
+> You can also run the origin container with the docker run command (from everywhere)<br/>
 > Attention: Change "project_folder" to your folder<br/>
 
 `docker run --name mysql_db -p 3306:3306 \`<br/>

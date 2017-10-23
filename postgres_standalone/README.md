@@ -1,6 +1,6 @@
-# oracle container
+# postgres container
 
-This is a standalone container with an oracle database.<br/>
+This is a standalone container with a postgres database.<br/>
 
 ### docker compose up
 
@@ -17,19 +17,20 @@ This is a standalone container with an oracle database.<br/>
 
 ### docker run
 
-> You can also run the container with the docker run command (from everywhere).<br/>
+> You can also run the origin container with the docker run command (from everywhere)<br/>
 > Attention: Change "project_folder" to your folder<br/>
 
-`docker run --name oracle_db -p 49160:22 -p 49161:1521 -p 49162:8080 \`<br/>
+`docker run --name postgres_db -p 5432:5432 \`<br/>
 `-v ~/project_folder/startup_scripts:/docker-entrypoint-initdb.d \`<br/>
-`-e ORACLE_ALLOW_REMOTE=true --restart=always \`<br/>
-`-d wnameless/oracle-xe-11g`<br/>
+`-e POSTGRES_PASSWORD=postgres --restart=always \`<br/>
+`-d postgres:latest`<br/>
 
 ### docker exec
 
 > To jump into the container use following commands:<br/>
 
-unix bash: `docker exec -it oracle_db /bin/bash`<br/>
-windows git bash: `winpty docker exec -it oracle_db bash`<br/>
-execute mysql cli: `sqlplus system/oracle@127.0.0.1:1521/XE;`<br/>
-execute commands: `SELECT username FROM dba_users;`<br/>
+unix bash: `docker exec -it postgres_db /bin/bash`<br/>
+windows git bash: `winpty docker exec -it postgres_db bash`<br/>
+execute mysql cli: `psql postgres postgres;`<br/>
+choose database: `\c mydatabase;`<br/>
+execute commands: `\dt;` (show tables)<br/> 
