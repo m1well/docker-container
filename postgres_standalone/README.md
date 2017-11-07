@@ -33,4 +33,4 @@ unix bash: `docker exec -it postgres_db /bin/bash`<br/>
 windows git bash: `winpty docker exec -it postgres_db bash`<br/>
 execute mysql cli: `psql postgres postgres;`<br/>
 choose database: `\c mydatabase;`<br/>
-execute commands: `\dt;` (show tables)<br/> 
+execute commands: `\dt;` (show tables)<br/>

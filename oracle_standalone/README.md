@@ -15,6 +15,10 @@ This is a standalone container with an oracle database.<br/>
 2. navigate to this folder "mysql"
 2. run command `bash build.sh`
 
+ATTENTION!<br/>
+To get auto incremented IDs in the table, you have to run the "create trigger script" again manually!!<br/>
+> I think oracle startup can't execute plsql statements?
+
 ### docker run
 
 > You can also run the container with the docker run command (from everywhere).<br/>

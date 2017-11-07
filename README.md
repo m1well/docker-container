@@ -1,7 +1,7 @@
 # docker container
 
 This is just a repository for a public storare of my most used container.<br/>
-> At the database container, there are some sample sql startup scripts.<br/>
+> At the database container, there are some sample sql startup scripts with autoincremented ids.<br/>
 > At the tomcat container, there is a sample webapp.<br/>
 
 ## Contribution

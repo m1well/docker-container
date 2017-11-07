@@ -8,9 +8,7 @@ USE mydatabase;
 DROP TABLE IF EXISTS app_authorities;
 
 CREATE TABLE app_authorities (
-   uuid VARCHAR(36) NOT NULL,
-   authority VARCHAR(100) NOT NULL,
-   app_user VARCHAR(36) NOT NULL,
-   PRIMARY KEY (uuid),
-   CONSTRAINT app_authorities_2_app_users FOREIGN KEY (app_user) REFERENCES app_users(uuid) ON UPDATE CASCADE
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  type VARCHAR(20) NOT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB;
