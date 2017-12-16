@@ -9,7 +9,6 @@ services:
   mysql_db:
     container_name: mysql_db
     image: m1well/mysql_db:latest
-    build: .
     ports:
       - "3306:3306"
     volumes:
